@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: dev
+  output:
+    ansi:
+      enabled: ALWAYS
+
+logging:
+  level:
+    root: INFO
+    org:
+      springframework: DEBUG
+      hibernate:
+        SQL: DEBUG
+        type.descriptor.sql.BasicBinder: TRACE
+    reactor:
+      netty:
+        http:
+          client: DEBUG
+    cn:
+      lcola: DEBUG
