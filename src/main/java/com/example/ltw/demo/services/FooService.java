@@ -1,10 +1,8 @@
 package com.example.ltw.demo.services;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
-public class FooService {
-    public String sayHello() {
-        return "hello";
-    }
+public interface FooService {
+    String sayHello();
 }

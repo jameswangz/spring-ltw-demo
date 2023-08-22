@@ -2,7 +2,6 @@
 <aspectj>
 
     <weaver>
-        <!-- only weave classes in our application-specific packages -->
         <include within="com.example.ltw.demo.models.*"/>
     </weaver>
 

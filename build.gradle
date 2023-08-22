@@ -14,19 +14,23 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.aspectj:aspectjweaver:1.9.7'
+	implementation 'org.springframework:spring-aspects'
+//	implementation 'org.springframework:spring-tx'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	// mysql
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
 }
 
 bootRun {
 	args = ['--add-opens java.base/java.lang=ALL-UNNAMED']
 	jvmArgs += [ '-javaagent:' + projectDir + '/lib/spring-instrument-5.3.10.jar']
+//	jvmArgs += [ '-javaagent:'  + projectDir + '/lib/aspectjweaver-1.9.7.jar', '-javaagent:'  + projectDir + '/lib/spring-instrument-5.3.10.jar' ]
 }
 
 test {
 	useJUnitPlatform()
 	doFirst {
-		jvmArgs += [ '-javaagent:' + projectDir + '/lib/spring-instrument-5.3.10.jar']
-//		jvmArgs += [ '-javaagent:'  + projectDir + '/lib/aspectjweaver-1.9.7.jar', '-javaagent:'  + projectDir + '/lib/spring-instrument-5.3.10.jar' ]
+		jvmArgs += ['-javaagent:'  + projectDir + '/lib/aspectjweaver-1.9.7.jar', '-javaagent:'  + projectDir + '/lib/spring-instrument-5.3.10.jar' ]
 	}
 }
