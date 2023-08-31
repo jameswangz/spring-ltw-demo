@@ -4,7 +4,7 @@ import com.example.ltw.demo.services.FooService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
 
-@Configurable(value = "foo")
+@Configurable
 public class Foo {
 
     private FooService fooService;

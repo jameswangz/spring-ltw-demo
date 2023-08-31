@@ -6,9 +6,17 @@ spring:
       enabled: ALWAYS
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:9306/ad_service_dev?useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://127.0.0.1:9306/ad_service_dev?useSSL=true&serverTimezone=Asia/Shanghai
     username: root
     password: Rdis2fun!
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+    hibernate:
+      ddl-auto: validate
 
 logging:
   level:
