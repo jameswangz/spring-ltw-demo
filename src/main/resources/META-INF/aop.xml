@@ -5,10 +5,13 @@
         <include within="com.example.ltw.demo.models.*"/>
     </weaver>
 
-    <!--
     <aspects>
+        <!--
         <aspect name="org.springframework.beans.factory.aspectj.AnnotationBeanConfigurerAspect" />
+        -->
+        <!--
+        <aspect name="com.example.ltw.demo.aspects.ProfilingAspect" />
+        -->
     </aspects>
-    -->
 
 </aspectj>

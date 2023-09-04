@@ -18,10 +18,9 @@ public class HelloController {
         return fooService.sayHello();
     }
 
-
     @GetMapping("/ltw")
     public String ltw() {
-       return new Foo().sayHello();
+       return new Foo().sayHello() + ", load time weaver.";
     }
 
 }
